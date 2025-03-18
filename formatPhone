@@ -1,0 +1,29 @@
+{
+  "id": "7bfb4dbc-6124-4e91-bcb3-02e7eb004710",
+  "createdAt": "2024-10-28T02:44:41.760Z",
+  "updatedAt": "2025-03-18T03:34:01.699Z",
+  "type": "function",
+  "function": {
+    "name": "formatPhone",
+    "strict": false,
+    "description": "Use this tool to format a phone number, to the US phone number pattern. \nHere is an example in JSON format:\n\n\"phone\": \"852-633-2527\"",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "description": "numero de telefone sem formatação.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "number"
+      ]
+    }
+  },
+  "messages": [],
+  "orgId": "447522ca-0626-4a29-9af6-592f9d986697",
+  "server": {
+    "url": "https://callselly-to-foodtec-paulo-henriq185.replit.app/api/customer/format-phone"
+  },
+  "async": false
+}
