@@ -1,0 +1,34 @@
+{
+  "id": "c2f90624-b6fe-451f-913c-1e9fa8db1a8e",
+  "createdAt": "2024-11-01T18:02:21.849Z",
+  "updatedAt": "2025-03-18T03:34:19.217Z",
+  "type": "function",
+  "function": {
+    "name": "orderConfirmation",
+    "strict": false,
+    "description": "This tool is responsible for confirming or canceling the order through externalRef, this tool should only be activated \n after the \"getValidateOrder\" tool returns.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "confirm": {
+          "description": "To confirm an order, you must send the value \"true\"; to cancel an order, you should send the value \"false\". Note: A confirmed order cannot be canceled.",
+          "type": "boolean"
+        },
+        "externalRef": {
+          "description": "\"externalRef\" must be captured in the successful return of the \"getValidateOrder\" tool. The return field must have the name \"externalRef\".",
+          "type": "string"
+        }
+      },
+      "required": [
+        "externalRef",
+        "confirm"
+      ]
+    }
+  },
+  "messages": [],
+  "orgId": "447522ca-0626-4a29-9af6-592f9d986697",
+  "server": {
+    "url": "https://callselly-to-foodtec-paulo-henriq185.replit.app/api/order/confirm"
+  },
+  "async": false
+}
