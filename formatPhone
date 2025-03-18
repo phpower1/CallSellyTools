@@ -1,7 +1,7 @@
 {
   "id": "7bfb4dbc-6124-4e91-bcb3-02e7eb004710",
   "createdAt": "2024-10-28T02:44:41.760Z",
-  "updatedAt": "2025-03-18T03:34:01.699Z",
+  "updatedAt": "2025-03-18T04:17:16.641Z",
   "type": "function",
   "function": {
     "name": "formatPhone",
@@ -11,7 +11,7 @@
       "type": "object",
       "properties": {
         "number": {
-          "description": "numero de telefone sem formatação.",
+          "description": "Original phone number before formatting.",
           "type": "string"
         }
       },
