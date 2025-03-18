@@ -1,0 +1,135 @@
+{
+  "id": "891c8005-b5b6-43db-974e-cfc69d0a3eb9",
+  "createdAt": "2024-10-20T23:34:13.951Z",
+  "updatedAt": "2025-03-18T03:46:50.361Z",
+  "type": "function",
+  "function": {
+    "name": "getValidateOrder",
+    "strict": false,
+    "description": "Add items to an order using the specified JSON format. For each item (e.g., pizza, calzone), populate the \"ingredients\" array with properties such as ingredient, price, isLeftHalf, isRightHalf, ordered, isAdHoc, qualifiers, and priceParticipation. Pay attention to the required properties. They must be included in the request along with other necessary properties.\nEnsure all default ingredients are always included—e.g., for a cheese pizza, include \"Pizza Sauce\" and \"Pizza Cheese\". Customize additional ingredients with qualifiers like \"Light\", \"Extra\" or \"Side\" as needed. Use this structure consistently for all item types. Always request this tool before the \"orderConfirmation\" tool.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "\"type\" is always \"Pickup\"",
+          "type": "string"
+        },
+        "items": {
+          "description": "An array of order items, each with details such as category, item name, size, quantity, selling price, and ingredients.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "item": {
+                "description": "Name of the item (e.g., \"Cheese\").",
+                "type": "string"
+              },
+              "size": {
+                "description": "Size of the item (e.g., \"Sm\").",
+                "type": "string"
+              },
+              "category": {
+                "description": "Category of the item (e.g., \"Pizza\").",
+                "type": "string"
+              },
+              "quantity": {
+                "description": "Quantity of the item.",
+                "type": "number"
+              },
+              "ingredients": {
+                "description": "List of ingredients.",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "price": {
+                      "description": "price of the ingredient. Optional",
+                      "type": "number"
+                    },
+                    "idAdHoc": {
+                      "description": "The price for Ad-Hoc ingredient. Optional",
+                      "type": "boolean"
+                    },
+                    "ordered": {
+                      "description": "A default ingredient that was selected. Optional",
+                      "type": "boolean"
+                    },
+                    "ingredient": {
+                      "description": "name of the ingredient. Required",
+                      "type": "string"
+                    },
+                    "isLeftHalf": {
+                      "description": "For a left-half ingredient. Optional",
+                      "type": "boolean"
+                    },
+                    "isRightHalf": {
+                      "description": "For a right-half ingredient. Optional",
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "ingredient"
+                  ]
+                }
+              },
+              "sellingPrice": {
+                "description": "Selling price of the item.",
+                "type": "number"
+              }
+            },
+            "required": [
+              "category",
+              "item",
+              "size",
+              "quantity",
+              "sellingPrice",
+              "ingredients"
+            ]
+          }
+        },
+        "price": {
+          "type": "number"
+        },
+        "source": {
+          "description": "The \"source\" is always \"Voice AI\".",
+          "type": "string"
+        },
+        "customer": {
+          "description": "",
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "The name of the customer.",
+              "type": "string"
+            },
+            "number": {
+              "description": "The phone number of the client.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "number"
+          ]
+        },
+        "orderNum": {
+          "description": "The \"orderNum\" value is always = 0.",
+          "type": "number"
+        }
+      },
+      "required": [
+        "items",
+        "source",
+        "orderNum",
+        "type",
+        "customer"
+      ]
+    }
+  },
+  "messages": [],
+  "orgId": "447522ca-0626-4a29-9af6-592f9d986697",
+  "server": {
+    "url": "https://callselly-to-foodtec-paulo-henriq185.replit.app/api/order/validate"
+  },
+  "async": false
+}
