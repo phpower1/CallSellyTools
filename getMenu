@@ -1,12 +1,12 @@
 {
   "id": "857dc499-7c1d-46fb-83c2-0aee407253e2",
   "createdAt": "2024-10-22T01:07:14.182Z",
-  "updatedAt": "2025-04-05T03:25:15.421Z",
+  "updatedAt": "2025-04-05T03:58:17.110Z",
   "type": "function",
   "function": {
     "name": "getMenu",
     "strict": false,
-    "description": "This tool should be used to retrieve the following data: \"category\" and \"items\".\nThe categories are:\n\"Bulk Drink\", \"Calzones\", \"Chips\", \"Dinner\", \"Drinks\", \"Misc\", \"Pasta\", \"Pizza\", \"Salad\", \"Sandwich\", \"Side Orders\", \"Slice\" and \"Subs\".\n\nLocate the desired product category in the menu. Once you find the category, you will know which specific item the customer wants. For instance, if the customer requests a Cheese Pizza with Pepperoni, it should appear like this in the response:\n\n\"category\": \"Pizza\"\n\"Item\": \"Cheese\"\n\"Ingridient\": \"Pepperoni\"",
+    "description": "This tool should be used to retrieve the following data: \"category\" and \"items\".\nThe categories are:\n\"Bulk Drink\", \"Calzones\", \"Chips\", \"Dinner\", \"Drinks\", \"Misc\", \"Pasta\", \"Pizza\", \"Salad\", \"Sandwich\", \"Side Orders\", \"Slice\" and \"Subs\".\n\nLocate the desired product category in the menu. Once you find the category, look for the specific item the customer wants. For instance, if the customer requests a Cheese Pizza with Pepperoni, it should appear like this in the response:\n\n\"category\": \"Pizza\"\n\"item\": \"Cheese\"\n\"ingridient\": \"Pepperoni\"",
     "parameters": {
       "type": "object",
       "properties": {
