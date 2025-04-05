@@ -1,7 +1,7 @@
 {
   "id": "857dc499-7c1d-46fb-83c2-0aee407253e2",
   "createdAt": "2024-10-22T01:07:14.182Z",
-  "updatedAt": "2025-04-05T03:58:17.110Z",
+  "updatedAt": "2025-04-05T04:02:19.197Z",
   "type": "function",
   "function": {
     "name": "getMenu",
@@ -11,7 +11,7 @@
       "type": "object",
       "properties": {
         "item": {
-          "description": "This is the item of the category.",
+          "description": "This is the item contained in the category.",
           "type": "string"
         },
         "category": {
@@ -19,7 +19,7 @@
           "type": "string"
         },
         "ingridient": {
-          "description": "This is the ingridient. ",
+          "description": "This property contains all the ingredients available for the items. ",
           "type": "string"
         }
       },
