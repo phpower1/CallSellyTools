@@ -1,0 +1,39 @@
+{
+  "id": "857dc499-7c1d-46fb-83c2-0aee407253e2",
+  "createdAt": "2024-10-22T01:07:14.182Z",
+  "updatedAt": "2025-04-05T03:25:15.421Z",
+  "type": "function",
+  "function": {
+    "name": "getMenu",
+    "strict": false,
+    "description": "This tool should be used to retrieve the following data: \"category\" and \"items\".\nThe categories are:\n\"Bulk Drink\", \"Calzones\", \"Chips\", \"Dinner\", \"Drinks\", \"Misc\", \"Pasta\", \"Pizza\", \"Salad\", \"Sandwich\", \"Side Orders\", \"Slice\" and \"Subs\".\n\nLocate the desired product category in the menu. Once you find the category, you will know which specific item the customer wants. For instance, if the customer requests a Cheese Pizza with Pepperoni, it should appear like this in the response:\n\n\"category\": \"Pizza\"\n\"Item\": \"Cheese\"\n\"Ingridient\": \"Pepperoni\"",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "item": {
+          "description": "This is the item of the category.",
+          "type": "string"
+        },
+        "category": {
+          "description": "This is the category of items available in the menu. The categories are:\n\"Bulk Drink\", \"Calzones\", \"Chips\", \"Dinner\", \"Drinks\", \"Misc\", \"Pasta\", \"Pizza\", \"Salad\", \"Sandwich\", \"Side Orders\", \"Slice\" and \"Subs\".",
+          "type": "string"
+        },
+        "ingridient": {
+          "description": "This is the ingridient. ",
+          "type": "string"
+        }
+      },
+      "required": []
+    }
+  },
+  "messages": [],
+  "orgId": "447522ca-0626-4a29-9af6-592f9d986697",
+  "server": {
+    "url": "https://callselly-to-foodtec-paulo-henriq185.replit.app/api/menu/categories",
+    "headers": {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJlZXIiLCJpYXQiOjE3MzA2OTgwNzF9.4_gIBTv6gT_U9boc73VeD-cE2a1nweuQIHPxJK2vA6o"
+    }
+  },
+  "async": true
+}
